@@ -15,6 +15,11 @@ R script is named run_analysis.R; it executes the following tasks:
 
 git hub location: https://github.com/zoplex/getting-and-cleaning-data-project
 
+Second data set with mean values 'tidy_mean_set.txt' is also attached to the repository together with the R script run_analysis.R;
+There is only one R script that completes the full job required.
+
+
+
 
 
     
