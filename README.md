@@ -1,4 +1,4 @@
-### Getting and Cleaning Data - Course Project
+### Getting and Cleaning Data - Course Project for coursera class
 
 
 This document described the work done for the course 'Getting and Cleaning Data'. 
@@ -13,5 +13,5 @@ R script is named run_analysis.R; it executes the following tasks:
 - Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
-
+git hub location: https://github.com/zoplex/
 
