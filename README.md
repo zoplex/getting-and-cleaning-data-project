@@ -13,5 +13,8 @@ R script is named run_analysis.R; it executes the following tasks:
 - Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
-git hub location: https://github.com/zoplex/
+git hub location: https://github.com/zoplex/getting-and-cleaning-data-project
 
+
+
+    
