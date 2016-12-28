@@ -7,7 +7,7 @@ Following files are included:
 
 1. R script run_analysis.R
 2. tidy_mean_set.txt - the final product of the code run
-3. CodeBook.txt documenting final data set column names
+3. CodeBook.md documenting final data set column names
 4. This README.md file tying it all together.
 
 

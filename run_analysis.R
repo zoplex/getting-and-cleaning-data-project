@@ -147,8 +147,6 @@ tot_acc_z_train_set     <- get_tot_acc_z_train_set()
 cat("all basic data loading completed, tarting data assembly phase ... \n")
 
 
-cat("all done\n")
-
 all_subjects            <- rbind( subj_test_set, subj_train_set )
 all_labels              <- rbind( test_y_set, train_y_set)
 alldata                 <- data.frame( subject_id = all_subjects$V1 )
@@ -196,13 +194,13 @@ names(desc_df)          <- better_col_names
 
 #      second, independent tidy data set with the average of each variable for each activity and each subject:
 #               agreggate - using dot notation for as there is large number of columns:
-data_df_2               <- aggregate( . ~subject_id + activity_name, desc_df, mean)
+tidy_df                 <- aggregate( . ~subject_id + activity_name, desc_df, mean)
 
 #               sort by subject, then by activity under it:
-data_df_2               <- data_df_2[ order( data_df_2$subject_id, data_df_2$activity_name), ]
+tidy_df                 <- tidy_df[ order( tidy_df$subject_id, tidy_df$activity_name), ]
 
 #               save to file:
-write.table(data_df_2, "tidy_mean_set.txt", row.names = FALSE, quote = FALSE)
+write.table(tidy_df, "tidy_mean_set.txt", row.names = FALSE, quote = FALSE)
 
 cat("all done\n")
 
