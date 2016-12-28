@@ -76,24 +76,7 @@ get_measurements_set       <- function( settype, tprefix, tsubtype, tcoord ) {
         measurement_set         <- fread( fname )
         return( measurement_set )
 }
-get_bod_acc_x_test_set               <- function() { return (get_measurements_set("test", "body", "acc", "x" )) }
-get_bod_acc_y_test_set               <- function() { return (get_measurements_set("test", "body", "acc", "y" )) }
-get_bod_acc_z_test_set               <- function() { return (get_measurements_set("test", "body", "acc", "z" )) }
-get_bod_gyr_x_test_set               <- function() { return (get_measurements_set("test", "body", "gyro", "x" )) }
-get_bod_gyr_y_test_set               <- function() { return (get_measurements_set("test", "body", "gyro", "y" )) }
-get_bod_gyr_z_test_set               <- function() { return (get_measurements_set("test", "body", "gyro", "z" )) }
-get_tot_acc_x_test_set               <- function() { return (get_measurements_set("test", "total", "acc", "x" )) }
-get_tot_acc_y_test_set               <- function() { return (get_measurements_set("test", "total", "acc", "y" )) }
-get_tot_acc_z_test_set               <- function() { return (get_measurements_set("test", "total", "acc", "z" )) }
-get_bod_acc_x_train_set              <- function() { return (get_measurements_set("train", "body", "acc", "x" )) }
-get_bod_acc_y_train_set              <- function() { return (get_measurements_set("train", "body", "acc", "y" )) }
-get_bod_acc_z_train_set              <- function() { return (get_measurements_set("train", "body", "acc", "z" )) }
-get_bod_gyr_x_train_set              <- function() { return (get_measurements_set("train", "body", "gyro", "x" )) }
-get_bod_gyr_y_train_set              <- function() { return (get_measurements_set("train", "body", "gyro", "y" )) }
-get_bod_gyr_z_train_set              <- function() { return (get_measurements_set("train", "body", "gyro", "z" )) }
-get_tot_acc_x_train_set              <- function() { return (get_measurements_set("train", "total", "acc", "x" )) }
-get_tot_acc_y_train_set              <- function() { return (get_measurements_set("train", "total", "acc", "y" )) }
-get_tot_acc_z_train_set              <- function() { return (get_measurements_set("train", "total", "acc", "z" )) }
+
 
 
 
@@ -125,26 +108,8 @@ train_y_set             <- get_y_train_set()
 subj_test_set           <- get_subject_test_set()
 subj_train_set          <- get_subject_train_set()
 
-bod_acc_x_test_set      <- get_bod_acc_x_test_set()
-bod_acc_y_test_set      <- get_bod_acc_y_test_set()
-bod_acc_z_test_set      <- get_bod_acc_z_test_set()
-bod_gyr_x_test_set      <- get_bod_gyr_x_test_set()
-bod_gyr_y_test_set      <- get_bod_gyr_y_test_set()
-bod_gyr_z_test_set      <- get_bod_gyr_z_test_set()
-tot_acc_x_test_set      <- get_tot_acc_x_test_set()
-tot_acc_y_test_set      <- get_tot_acc_y_test_set()
-tot_acc_z_test_set      <- get_tot_acc_z_test_set()
-bod_acc_x_train_set     <- get_bod_acc_x_train_set()
-bod_acc_y_train_set     <- get_bod_acc_y_train_set()
-bod_acc_z_train_set     <- get_bod_acc_z_train_set()
-bod_gyr_x_train_set     <- get_bod_gyr_x_train_set()
-bod_gyr_y_train_set     <- get_bod_gyr_y_train_set()
-bod_gyr_z_train_set     <- get_bod_gyr_z_train_set()
-tot_acc_x_train_set     <- get_tot_acc_x_train_set()
-tot_acc_y_train_set     <- get_tot_acc_y_train_set()
-tot_acc_z_train_set     <- get_tot_acc_z_train_set()
 
-cat("all basic data loading completed, tarting data assembly phase ... \n")
+cat("all basic data loading completed, starting data assembly phase ... \n")
 
 
 all_subjects            <- rbind( subj_test_set, subj_train_set )
